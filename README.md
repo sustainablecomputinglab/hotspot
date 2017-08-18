@@ -1,2 +1,2 @@
-# automaton
-Automaton self-migrating resource container
+# HotSpot
+HotSpot self-migrating resource container
