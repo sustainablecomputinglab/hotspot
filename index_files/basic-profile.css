@@ -1,0 +1,69 @@
+/*
+Original design: Basic Profile (v1.0 - March 23rd, 2011) - A free xhtml/css website template by Andreas Viklund.
+For more information, see http://andreasviklund.com/templates/basic-profile/
+
+Original color: #239a23
+Bluer version: #2a5a9a
+*/
+
+*{margin:0; padding:0;}
+body {background:#fff url(background.jpg) top center no-repeat; color:#303030; font:84% Arial,Helvetica,sans-serif; line-height:1.6em;}
+a {color:#8B0000; text-decoration:none;}
+a:hover {text-decoration:underline;}
+ul,dl {margin:0 0 20px 0;}
+p {margin:0 0 20px 0;}
+h1 {color:#888; font-size:3.2em; line-height:1.1em; letter-spacing:-2px; margin:20px 0 20px 0; border-bottom: 2px solid #eee;}
+h1 a {text-transform:none; text-decoration: none;}
+h1 a:hover {color:#333; text-transform:none; text-decoration: none;}
+h2 {font-size:2em; color:#333; margin:30px 0 20px 0; letter-spacing:-1px; border-bottom:2px solid #eee;}
+h2 a {color:#333; text-transform:none; text-decoration: none;}
+h2 a:hover {color:#333; text-transform:none; text-decoration: none;}
+h3 {font-size:1.8em; color:black; margin:30px 0 15px 0; letter-spacing:-1px; border-bottom:2px solid #eee;}
+h1,h2,h3 {font-weight:700; line-height:1.4em;}
+#wrap {color:#303030; margin:40px auto; padding:0; width:910px;}
+#content {text-align:left; width:630px; padding-right:40px;}
+#sidebar {float:right; width:200px; padding-left:40px; border-left:2px solid #ccc; }
+#sidebar ul {list-style:none; margin:0; padding:10px 0 0 0; border-top:1px solid #eee;}
+#sidebar li {list-style:none; font-size:1.2em; margin:0 0 10px; padding:0 0 10px 0; color:#888; border-bottom:1px solid #eee;}
+#sidebar li a {font-size:1.2em;}
+#sidebar h2 {font-size: 1.4em;}
+.toappear {color:#707070; border-bottom: 1px dashed #707070;}
+.slogan {color:#888; font-size:1.4em; font-weight:700; margin:0 0 20px 0; letter-spacing:-1px;}
+.readmore {text-align:right; margin:0 20px 30px 0;}
+.timestamp {display:block; font-weight:700; color:#888; text-align:right; width:150px; padding:20px 20px 20px 0; float:left; margin:0 20px 20px 0; border-right:2px solid #eee;}
+.timestamp a {font-weight:normal;}
+.credits {display:block; text-align:center; width:100%; font-size:0.9em; color:#aaa; margin:30px 0;}
+.credits a {color:#888;}
+.clear {clear:both;}
+.announcement {text-align: center; padding: 10px; margin-bottom: 20px; margin-left: auto; margin-right: auto; border: 1px solid #808080; box-shadow: 2px 2px 1px grey;}
+ul.moreindent {margin: 0 0 20px 0;}
+ul.moreindent li {margin-left: 20px;}
+table ul {margin: 0 0 0 0;}
+table ul li {margin-left: 17px;}
+
+table {
+  border-width: 1px;
+  border-spacing: 0;
+  border-style: none;
+  border-color: #ddd;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+table th {
+  border-width: 1px;
+  padding: 3px 8px;
+  border-style: solid;
+  border-color: #ddd;
+  background-color: #eee;
+  color: #808080;
+  font-weight: bold;
+}
+
+table td {
+  border-width: 1px;
+  padding: 3px 8px;
+  border-style: solid;
+  border-color: #ddd;
+  text-align:center; 
+}

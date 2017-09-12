@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>
+      HotSpot 
+    </title>
+    <link rel="stylesheet" href="./index_files/basic-profile.css" media="all">
+    
+    <style>
+      @font-face {
+        font-family: titleFont;
+        src: url(index_files/IntroRustG-Base2Line.otf);
+      }
+    </style>
+
+  <body>
+    <div id="wrap">
+      <div id="sidebar">
+      <div style="width: 100%; background:white; margin:0; text-align: center; padding-bottom: 10px;">
+        <img src="docs/hotspot.png" width="100%" height="100%" style="border: none; margin-bottom:10px">
+        <h3>Get Started</h3>
+        <table style="border: 0px" width="100%">
+        <tr>
+            <td width="33%" style="text-align:center; border-width: 0px;">
+                <a href="https://github.com/umass-sustainablecomputinglab/hotspot/tree/master/code">
+                <img src="images/github.png" width="100%" height="20%"></a></td>
+            <td width="33%" style="text-align:center; border-width: 0px;">
+                <a href="https://github.com/umass-sustainablecomputinglab/hotspot/blob/master/setup.md">
+                <img src="images/setup.png" width="120%" height="10%"></a></td>
+            <td width="33%" style="text-align:center; border-width: 0px;">
+                <a href="https://umass.box.com/s/jfbuno6sgyvmul72ise99tc09lqnja5d">
+                <img src="images/data.png" width="70%" height="10%"></a></td>
+        </tr>
+        <tr>
+            <td style="text-align:center; border-width: 0px;">
+                <a href="https://github.com/umass-sustainablecomputinglab/hotspot/tree/master/code" 
+                    style="color:#808080; font-size:110%">explore code</a></td>
+            <td style="text-align:center; border-width: 0px;">
+                <a href="https://github.com/umass-sustainablecomputinglab/hotspot/blob/master/setup.md" 
+                    style="color:#808080; font-size:110%">setup/ install</a></td>
+            <td style="text-align:center; border-width: 0px;">
+                <a href="https://umass.box.com/s/jfbuno6sgyvmul72ise99tc09lqnja5d" 
+                    style="color:#808080; font-size:110%">download dataset</a></td>
+        </tr>
+        </table>
+      </div>
+      </div>
+      <div id="content">
+
+<h1>HotSpot</h1>
+<p>Interested in transient servers (like <a href="https://aws.amazon.com/ec2/spot/" style="color: #8B0000">Amazon spot instances</a>) but burdened by the effort to explicitly manage their risk-cost-performance tradeoff? Don't want to rely on third-party intermediaries (like <a href="https://spotinst.com/" style="color: #8B0000">SpotInst</a>) to run your workload? Try <strong><em>HotSpot!</em></strong></p>
+
+<h3>Motivation</h3>
+<p>HotSpot is motivated by our spot market analysis and observations that (i) the most discounted VMs tend to have low revocation risks (as a high discount reflects low demand relative to supply), and (ii) price risk (i.e., risk that a VM's price will increase relative to others) is more dynamic than revocation risk. Together, these observations show an opportunity to lower an application's cost via server hopping without increasing its revocation risk or decreasing its performance (in fact, our analysis shows that in current EC2 spot markets, hopping decreases revocation risk as well as increases performance). This is akin to <strong>active trading</strong> in financial markets.</p>
+
+<h3> Automated Server Hopping</h3>
+<p>At the core of HotSpot is a new system level mechanism called <em>automated server hopping</em>, which enables applications to proactively but transparently migrate to spot VMs that currently offer the lowest cost. HotSpot is designed to be <strong>transparent</strong> (requires no modifications to applications or existing cloud provider SLOs), <strong>simple</strong> (users just need to use a HotSpot enabled AMI), and <strong>decentralized</strong> (does not need economy of scale to work). Learn more about the system design and evaluation in the paper below.</p>
+
+<h3>Publications</h3>
+    HotSpot: Automated Server Hopping in Cloud Spot Markets <br>
+    <font color="#808080"> Supreeth Shastri and David Irwin </font> <br>
+    <a href="http://acmsocc.github.io/2017/schedule.html" style="color: #8B0000; font-family: titleFont">SoCC 2017</a> &emsp; 
+    <a href="docs/socc2017.pdf" style="color: #808080">PAPER</a> &emsp; 
+    <br><br> 
+    
+    Towards Self-optimizing Cloud Servers <br>
+    <font color="#808080"> Supreeth Shastri and David Irwin </font> <br>
+    <a href="http://acmsocc.github.io/2016/poster-sessions.html" style="color: #8B0000; font-family: titleFont">SoCC 2016</a> &emsp; 
+    <a href="docs/socc2016.pdf" style="color: #808080">POSTER</a> &emsp; 
+    <br>
+
+<h3>Contact Us</h3>
+<p>We would love to hear from you. Please send a note to <a href="mailto:shastri@umass.edu"  style="color: #8B0000">Supreeth</a> or <a href="mailto:irwin@ecs.umass.edu"  style="color: #8B0000">David</a> for any questions on or feedback about HotSpot.</p>
+
+    <p class="credits">
+     Based on a template from <a href="https://cs.stanford.edu/~matei/">Matei Zaharia</a>. 
+    </p>
+  </div>
+</div>
+
+</body></html>
