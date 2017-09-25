@@ -12,7 +12,8 @@ sudo apt-get remove lxd
 sudo pip install --upgrade pip
 sudo pip install boto3
 sudo echo "2 eth1_rt" >> /etc/iproute2/rt_tables
-sudo add /home/ubuntu/hotSpot/hotSpotSetup.sh to </etc/rc.local>
+scp hotSpot-code-dir to /home/ubuntu/hotSpot
+sudo add /home/ubuntu/hotSpot/scripts/hotSpotSetup.sh to </etc/rc.local>
 ```
 
 Finally, stop the EC2 instance and save its snapshot as the new AMI.
@@ -73,9 +74,11 @@ ec2-attach-volume VOL-ID -i INST-ID -d /dev/sdh --region REGION-ID
 ec2-attach-network-interface ENI-ID --region REGION-ID -i INST-ID -d 1
 ```
 
-The preconfigured HotSpot startup script will trigger automatically, and take over control from there. Or alternatively, if we wish to debug/check the setup before starting the application, we could kill the hotSpot startup script before attaching EBS and ENI. Once done, the HotSpot controller could be manually started to transfer the control.
+The preconfigured HotSpot startup script will trigger automatically but will terminate since we haven't yet setup the application and its parameters. The first step is to populate the EBS/ENI/instance info in `/homt/ubuntu/hotSpot/controller/config`. Next, start the LXC container, login via serial console, and launch the user applicaiton. Finally, we start the HotSpot controller manually and it takes over the control.
 
 ```shell
-python /home/ubuntu/hotSpot/hotSpotSetup.sh
+sudo lxc-console -n hotSpotLXC
+[lxc-bash]# nohup ./application &
+python /home/ubuntu/hotSpot/scripts/hotSpotSetup.sh
 ```
 
